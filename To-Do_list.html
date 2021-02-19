@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <title>Document</title>
+    <style>
+        body {
+            
+            background: gray;
+        }
+
+        .container {
+            padding: 20px;
+            width: 300px;
+            margin: 0 auto;
+            margin-top: 40px;
+            background: white;
+            border-radius: 5px;
+            
+        }
+
+        form {
+            display: inline-block;
+        }
+
+        input {
+            padding: 4px 40px 4px 15px;
+        }
+
+        #button {
+            display: inline-block;
+            background-color: #fc999b;
+            color: #ffffff;
+            border-radius: 5px;
+            text-align: center;
+            margin-top: 5px;
+            padding: 5px 15px;
+        }
+
+        #button:hover {
+            cursor: pointer;
+            opacity: .8;
+            
+        }
+
+        ol {
+            padding-left: 20px;
+        }
+
+        ol li {
+            padding: 5px;
+            color: #000;
+        }
+
+        ol li:nth-child(even) {
+            background: #dfdfdf;
+        }
+
+        
+        li:hover {
+            cursor: pointer;
+        }
+    </style>
+
+
+
+</head>
+
+<body>
+    <div class="container">
+        <h2>AchieversIT To Do List</h2>
+        <form name="toDoList">
+            <input type="text" name="ListItem" />
+        </form>
+
+        <div id="button">Add</div>
+        <br />
+        <ol></ol>
+        <!-- <ol>UI Development</ol>
+		<ol>Angular</ol>
+
+		<ol>React</ol>
+
+		<ol>Web Development</ol> -->
+
+
+    </div>
+    <script>
+        $(document).ready(function () {
+                $('#button').click(function () {
+                var toAdd = $('input[name=ListItem]').val();
+                $('ol').append('<li>' + toAdd + '</li>');
+            });
+
+              
+
+            }
+        );
+
+
+    </script>
+</body>
+
+</html>

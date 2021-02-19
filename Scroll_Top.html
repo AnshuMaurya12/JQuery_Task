@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/smoothness/jquery-ui.css">
+     <!--<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+     ---> <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script> 
+     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <title>Scroll_Up</title>
+    <style>
+
+body{
+    background-color: aqua;
+}
+html{
+    scroll-behavior: smooth;
+
+}
+.smoothScroll {
+  text-decoration: none;
+  font-family: Arial;
+  margin: 24px;
+}
+.title {
+  
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 24px;
+  font-size: 12px;
+}
+.content {
+  margin-top: 50%;
+  margin-bottom: 50%;
+}
+
+
+
+
+
+</style>
+<img src="..\images\ait.jpg" alt="ait">
+
+
+
+<h5>Contact Us About US</h5>
+
+<a class="smoothScroll" href="#bottom">Go To Bottom</a>
+<p>JQuery</p>
+<p>JQuery</p>
+<p>JQuery</p>
+<p>JQuery</p>
+<div class="content"></div>
+<h5>JQuery</h5>
+
+<a class="smoothScroll" href="#top" id="bottom">Go To Top</a>
+
+ <script>
+
+$(function() {
+  $('.smoothScroll').click(function() {
+    if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
+      var target = $(this.hash);
+      target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+      if (target.length) {
+        $('html,body').animate({
+          scrollTop: target.offset().top,
+    
+        }, 100); 
+        return false;
+      }
+    }
+  });
+});
+
+
+
+    
+
+</script> 
+
+</body>
+</html>
